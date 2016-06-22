@@ -33,6 +33,8 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# Don't commit the real API token
+token.js
 # =========================
 # Operating System Files
 # =========================
