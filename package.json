@@ -1,0 +1,28 @@
+{
+  "name": "koshekh",
+  "version": "1.0.0",
+  "description": "a simple welcome to Night Vale quote of the day Bot",
+  "main": "koshekh.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "koshekh",
+    "WTNV",
+    "Night",
+    "Vale",
+    "Bot",
+    "Slack",
+    "Quote",
+    "QOTD"
+  ],
+  "author": "Jason (southpawFrenzy)",
+  "license": "MIT",
+  "dependencies": {
+    "slackbots": "^0.5.1",
+    "sqlite3": "^3.1.4",
+	"async": "^1.4.1",
+    "progress": "^1.1.8",
+    "request": "^2.60.0"
+  }
+}
