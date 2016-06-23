@@ -27,9 +27,10 @@ var outputFile = process.argv[2] || path.resolve(__dirname, 'koshekhbot.db');
 var db = new sqlite3.Database(outputFile);
 
 // executes an API request to count all the available quotes
-request('\cecilspeaks.json', function (error, response, body) {
-	console.log(error);
-	console.log(response.statusCode);
+request('https://raw.githubusercontent.com/southpawFrenzy/koshekhBot/master/quoteCount.json', function (error, response, body) {
+	console.log("Error code:"+error);
+	console.log("Status code:"+response.statusCode);
+	console.log(JSON.parse(body).count);
     if (!error && response.statusCode === 200) {
         var count = JSON.parse(body).count;
         var savedQuotes = 0;
@@ -55,10 +56,10 @@ request('\cecilspeaks.json', function (error, response, body) {
 
         // The task executed at every iteration. Basically fetches a new quote and creates a new record in the database.
         var task = function (cb) {
-            request('\cecilspeaks.json' + (++index) + '?escape=javascript', function (err, response, body) {
+            request('https://raw.githubusercontent.com/southpawFrenzy/koshekhBot/master/cecilspeaks.json' + (++index) + '?escape=javascript', function (err, response, body) {
                 // handle possible request errors by stopping the whole process
                 if (err || response.statusCode !== 200) {
-                    console.log(index, error, response.statusCode);
+                    console.log("index:"+index, "Error Code:"+error, "Status code:"+response.statusCode);
 
                     return cb(error || response.statusCode);
                 }
