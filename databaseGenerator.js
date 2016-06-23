@@ -31,8 +31,9 @@ request('https://raw.githubusercontent.com/southpawFrenzy/koshekhBot/master/ceci
 	console.log(error);
 	console.log(response.statusCode);
     if (!error && response.statusCode === 200) {
-        var count = JSON.parse(body).count;
+        //var count = JSON.parse(body).count;
 		var quotesArray = JSON.parse(body).value;
+		var count = quotesArray.length;
         var savedQuotes = 0;
         var index = 0;
 
@@ -56,9 +57,9 @@ request('https://raw.githubusercontent.com/southpawFrenzy/koshekhBot/master/ceci
             if (err) {
                 return err;
             }
-				console.log(quotesArray[savedQuotes].quote);
-                ++savedQuotes;
-            });
+		});
+		console.log(quotesArray[savedQuotes].quote);
+        savedQuotes++;         
 		}while (savedQuotes < count);
         // The idea from now on is to iterate through all the possible quotes starting from the index 1 until we can
         // find all the available ones. There might be holes in the sequence, so we might want to issue all the requests
