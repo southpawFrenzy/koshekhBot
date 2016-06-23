@@ -35,6 +35,9 @@ jspm_packages
 
 # Don't commit the real API token
 token.js
+
+# Test and trial files
+test-space
 # =========================
 # Operating System Files
 # =========================
