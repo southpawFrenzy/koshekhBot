@@ -6,7 +6,7 @@
  * KoshekhBot launcher script.
  */
 
-var koshekhbot = require('../lib/koshekh');
+var KoshekhBot = require('../lib/koshekh');
 
 /**
  * Environment variables used to configure the bot:
