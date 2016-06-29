@@ -2,7 +2,14 @@
   "name": "koshekh",
   "version": "1.0.0",
   "description": "a simple welcome to Night Vale quote of the day Bot",
-  "main": "koshekh.js",
+  "repository": {
+	"type": "git",
+	"url":"https://github.com/southpawFrenzy/koshekhBot"
+  },
+  "main": "lib/koshekh.js",
+  "bin": {
+	"koshekhbot":"bin/bot.js",
+	},
   "scripts": {
 	"start":"node bin/bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +24,7 @@
     "Quote",
     "QOTD"
   ],
-  "author": "Jason (southpawFrenzy)",
+  "author": "Jason (southpawFrenzy) Hall",
   "license": "MIT",
   "dependencies": {
     "slackbots": "^0.5.1",
