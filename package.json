@@ -1,36 +1,42 @@
 {
-  "name": "koshekh",
+  "name": "koshekhbot",
   "version": "1.0.0",
   "description": "a simple welcome to Night Vale quote of the day Bot",
-  "repository": {
-	"type": "git",
-	"url":"https://github.com/southpawFrenzy/koshekhBot"
-  },
   "main": "lib/koshekh.js",
   "bin": {
-	"koshekhbot":"bin/bot.js",
-	},
+    "koshekhbot": "bin/bot.js"
+  },
+  "dependencies": {
+    "async": "^2.0.0-rc.6",
+    "path": "^0.12.7",
+    "slackbots": "^0.5.1",
+    "progressbar": "^1.1.1",
+    "progress": "^1.1.8",
+    "sqlite3": "^3.1.4",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {},
   "scripts": {
-	"start":"node bin/bot.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/southpawFrenzy/koshekhBot.git"
   },
   "keywords": [
     "koshekh",
     "WTNV",
-    "Night",
-    "Vale",
-    "Bot",
-    "Slack",
-    "Quote",
+    "night",
+    "vale",
+    "bot",
+    "slack",
+    "quote",
     "QOTD"
   ],
-  "author": "Jason (southpawFrenzy) Hall",
+  "author": "Jason (SouthpawFrenzy)",
   "license": "MIT",
-  "dependencies": {
-    "slackbots": "^0.5.1",
-    "sqlite3": "^3.1.4",
-	"async": "^1.4.1",
-    "progress": "^1.1.8",
-    "request": "^2.60.0"
-  }
+  "bugs": {
+    "url": "https://github.com/southpawFrenzy/koshekhBot/issues"
+  },
+  "homepage": "https://github.com/southpawFrenzy/koshekhBot#readme"
 }
